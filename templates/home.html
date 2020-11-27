@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>My Home</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
-<body>
-	<h1>This is my Page</h1>
 
-	<form action="imageprocess" method="POST" enctype="multipart/form-data">
-		{% csrf_token %}
-		<input id="image" type="file" name="image" />
-		<input type="submit" value="Submit">
-	</form>
+<body>
+	<div class="card">
+		<div class="card-body">
+			<h1 class="card-text">This is my Page</h1>
+			<form action="imageprocess" method="POST" enctype="multipart/form-data">
+				{% csrf_token %}
+				<input id="image" class="btn btn-outline-primary col-md-4" type="file" name="image" id="files"/>
+				<input type="submit" class="btn btn-outline-success col-md-4" value="Submit">
+			</form>
+		</div>
+	</div>
 </body>
+
 </html>
